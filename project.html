@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>&#127879; Quizz game!!! &#127879;</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles/style-project.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="./scripts/project/main.js" type="module" defer></script>
+</head>
+
+<body>
+    <main class="container vh-100 d-flex flex-column align-items-center justify-content-center">
+        <div id="gameFrame"></div>
+        <div id="test"></div>
+    </main>
+
+    <footer class="sticky-bottom position-absolute w-100 d-flex justify-content-center">
+        created by <span class="fw-bold mx-1"><a class="text-decoration-none text-dark" target="_blank" href="https://github.com/roquepulido">roque.pulido</a></span> -
+        devChallenges.io
+    </footer>
+
+    <!-- ------------------TEMPLATES---------------- -->
+
+    <!--  TEMPLATE WIN QUESTION -->
+    <template id="win">
+        <h1 class="title fw-bold text-uppercase">Country quiz</h1>
+
+        <div id="quizzFrame" class="row rounded-5 pt-5 justify-content-center gap-5">
+            <img class="w-50" src="./images/undraw_winners.svg" alt="Win" />
+            <div class="text-center">
+                <h1 class="results-h1">Results</h1>
+                <p class="results-text">
+                    You got <span id="totalPoints" class="fw-bold">4</span> correct answers
+                </p>
+            </div>
+            <button class="btn text-center w-50 mb-5" id="try-again">
+                Try again
+            </button>
+        </div>
+    </template>
+    <!--  END TEMPLATE WIN QUESTION -->
+<!--  TEMPLATE BUTTON -->
+    <template id="buttonOption">
+        <button class="btn btn-outline-primary mx-auto rounded-4 text-start" type="submit">
+            <div class="row">
+                <div class="col-2 d-flex align-items-center">
+                    <span class="letter fs-4 "></span>
+                </div>
+                <div class="col d-flex align-items-center">
+                    <span class="answer"></span>
+                </div>
+                <div class="col-1 me-3 d-flex align-items-center">
+                    <span class="cancel material-symbols-outlined visually-hidden">
+                        cancel
+                    </span>
+                    <span class="check material-symbols-outlined visually-hidden">
+                        check_circle
+                    </span>
+                </div>
+            </div>
+        </button>
+    </template>
+<!-- END TEMPLATE BUTTON -->
+<!-- TEMPLATE CAPITAL QUESTION -->
+    <template id="capitalQuestion">
+        <h1 class="title fw-bold text-uppercase">Country quiz</h1>
+
+        <div id="quizzFrame" class="position-relative rounded-5 pt-5">
+            <img class="position-absolute top-0 end-0 translate-middle-y" src="./images/undraw_adventure.svg"
+                alt="adventure" />
+            <div class="container pt-4">
+                <p class="fw-bold fs-4 text-center" id="question"></p>
+                <form id="options" class="row gap-4 my-4 px-2"></form>
+            </div>
+            <div class="row justify-content-end">
+                <button class="btn text-center me-5 my-4 visually-hidden" id="next">
+                    Next
+                </button>
+            </div>
+        </div>
+    </template>
+<!-- END TEMPLATE CAPITAL QUESTION -->
+<!-- TEMPLATE FLAG QUESTION -->
+    <template id="flagQuestion">
+        <h1 class="title fw-bold text-uppercase">Country quiz</h1>
+
+        <div id="quizzFrame" class="position-relative rounded-5 pt-5">
+            <img class="position-absolute top-0 end-0 translate-middle-y" src="./images/undraw_adventure.svg"
+                alt="adventure" />
+            <div class="container pt-4">
+                <div class="row justify-content-center p-5">
+                    <img id="flagIMG" class="w-75" src="" alt="Flag" />
+
+                </div>
+                <p class="fw-bold fs-4 ms-4" id="question">
+                    Which country does this flag belong to?
+                </p>
+                <form id="options" class="row gap-4 my-4 px-2"></form>
+            </div>
+            <div class="row justify-content-end">
+                <button class="btn text-center me-5 my-4 visually-hidden" id="next">
+                    Next
+                </button>
+            </div>
+        </div>
+    </template>
+<!-- END TEMPLATE FLAG QUESTION -->
+<!-- TEMPLATE WELCOME -->
+<template id="welcome"></template>
+<!-- END TEMPLATE ELCOME -->
+    <!-- -----------------------END TEMPLATES---------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
